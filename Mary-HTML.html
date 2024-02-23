@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+    body {
+      background-color: #F3D7CA;
+    }
+    h1, h2, h3 {
+      padding: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+    li {
+      list-style-type: disc; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to...</h1>
+  <p>This is a paragraph...</p>
+  <img src="bg.jpg">
+  
+  <ol>
+    <li>Roses</li>
+    <li>Tulips</li>
+    <li>Orchids</li>
+  </ol>
+  <p>Visit for a <a href="https://www.flowerchimp.com.ph/collections/flower-bouquets"> Bouquet Shop</a></p>
+  
+  <h3 style="color: #ad9479;">Perfect Flowers for Bouquets!!! </h3>
+  <button onclick="checkNumber()">Check Number</button>
+  <p id="result"></p>
+  <script>
+    function checkNumber() {
+      var number = prompt("Enter number:");
+      
+      if (isNaN(number)) {
+        document.getElementById("result").textContent = "Invalid input. Please enter a valid number.";
+        return;
+      }
+      number = Number(number);
+      if (number % 2 === 0) {
+        document.getElementById("result").textContent = number + " is even.";
+      } else {
+        document.getElementById("result").textContent = number + " is odd.";
+      }
+    }
+  </script>
+</body>
+</html>
